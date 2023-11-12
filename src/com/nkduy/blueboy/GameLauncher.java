@@ -45,8 +45,7 @@ public class GameLauncher extends JFrame implements ActionListener {
         setSize(400, 200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        ImageIcon iconImage = new ImageIcon(Objects
-                .requireNonNull(getClass().getClassLoader().getResource("player/boy/down_1.png")));
+        ImageIcon iconImage = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("player/boy/down_1.png")));
         setIconImage(iconImage.getImage());
 
         panel = new JPanel(new GridBagLayout());
@@ -111,13 +110,12 @@ public class GameLauncher extends JFrame implements ActionListener {
             UIManager.put("Button.foreground", Color.WHITE);
             UIManager.put("Button.border", BorderFactory.createEmptyBorder(5, 10, 5, 10));
 
-            ImageIcon icon = new ImageIcon(Objects
-                    .requireNonNull(getClass().getClassLoader().getResource("player/boy/down_1.png")));
+            ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("player/boy/down_1.png")));
             Image image = icon.getImage();
             Image newImage = image.getScaledInstance(48, 48, java.awt.Image.SCALE_SMOOTH);
             ImageIcon newIcon = new ImageIcon(newImage);
             do {
-                username = (String) JOptionPane.showInputDialog(this, "Enter your username (10 characters):", "Input", JOptionPane.PLAIN_MESSAGE, newIcon, null, null);
+                username = (String)JOptionPane.showInputDialog(this, "Enter your username (10 characters):", "Input", JOptionPane.PLAIN_MESSAGE, newIcon, null, null);
 
                 if (username == null) {
                     username = " ";
